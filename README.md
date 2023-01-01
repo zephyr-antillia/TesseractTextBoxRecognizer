@@ -26,9 +26,7 @@ We use Python3 venv on Windows11 OS.
 <h2>
 3 Sample Program
 </h2>
-Please open Windows Powershell console.<br>
-
-Please run the following command in <b>Cloud Tools for PowerShell</b> console.<br>
+Please open Windows Powershell console, and run the following command in the console window.<br>
 
 > python TesseractTextBoxRecognizer.py
 
