@@ -54,7 +54,7 @@ class TesseractTextBoxRecognizer:
 
     VISUALIZER          = "visualizer"
     self.font_name      = self.config.get(VISUALIZER, "font_name")
-
+    self.draw_boundingbox = self.config.get(VISUALIZER, "draw_boundingbox")
 
     os.environ['PATH'] = os.environ['PATH'] + OCR_ENGINE_PATH
     os.environ["TESSDATA_PREFIX"] = OCR_ENGINE_PATH+ '\\tessdata' #TESSDATA_PATH
@@ -110,7 +110,7 @@ class TesseractTextBoxRecognizer:
       boxies = self.tool.image_to_string(img, lang=self.language_hints, builder=self.builder)
 
       visualizer  = RecognizedObjectsVisualizer(self.font_name)
-      visualizer.visualize(boxies, enhanced_image_file, output_dir)
+      visualizer.visualize(boxies, enhanced_image_file, output_dir, self.draw_boundingbox)
       
     except:
       traceback.print_exc()

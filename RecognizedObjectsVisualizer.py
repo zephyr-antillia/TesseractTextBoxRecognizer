@@ -52,7 +52,7 @@ class RecognizedObjectsVisualizer:
     return (font, direction)
 
 
-  def visualize(self, boxies, image_file, output_dir):
+  def visualize(self, boxies, image_file, output_dir, draw_boundingbox):
     org = Image.open(image_file)
     w, h = org.size
     img = Image.new("RGB", (w,  h), (255, 255, 255))
@@ -66,8 +66,8 @@ class RecognizedObjectsVisualizer:
       min_y = pos[0][1]
       max_x = pos[1][0]
       max_y = pos[1][1]
-      
-      draw.rectangle(pos, fill=None, outline="red", width=1)
+      if draw_boundingbox:
+        draw.rectangle(pos, fill=None, outline="red", width=1)
  
       #draw.rectangle([(min_x, min_y), (max_x, max_y)], fill=None, outline="red", width=1)
       h = max_y - min_y
