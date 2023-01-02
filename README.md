@@ -1,7 +1,7 @@
 # TesseractTextBoxRecognizer
 Tesseract Text Box Reconginizer
 
-This a simple command line client to Google Cloud Vision Text Recognizer.<br>
+This a simple command line client to Tesseract Text Box Recognizer.<br>
 
 <h2> 
 1 Install
@@ -105,4 +105,12 @@ Text Box Recognition:<br>
      width="1280" height="auto">
 <br>
 
+Example 6: RoadSign.png<br>
+<img src="./samples/RoadSign.png" width="1280" height="auto"><br>
+<br>
+
+Text Box Recognition:<br>
+<img src="./outputs/preprocessed_scaling_3_contrast_2_sharpness_3_RoadSign.png"
+     width="1280" height="auto">
+<br>
 
