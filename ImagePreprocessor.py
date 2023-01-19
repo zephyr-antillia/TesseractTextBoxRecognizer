@@ -21,9 +21,9 @@ import os
 from PIL import Image, ImageEnhance, ImageFilter
 
 class ImagePreprocessor:
-  def __init__(self, image_scaling=3.0, constrast=1.5, sharpness=4.0, gray_image=True, preprocessing=True):
+  def __init__(self, image_scaling=3.0, contrast=1.5, sharpness=4.0, gray_image=True, preprocessing=True):
     self.image_scaling = image_scaling
-    self.contrast      = constrast
+    self.contrast      = contrast
     self.gray_image    = gray_image
     self.sharpness     = sharpness #4.0 # 2.5
     self.preprocessing = preprocessing
@@ -33,7 +33,7 @@ class ImagePreprocessor:
 
     self.image_scaling = image_scaling
 
-    self.constrast     = contrast
+    self.contrast      = contrast
     self.sharpness     = sharpness
     
     if os.path.exists(image_file):

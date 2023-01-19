@@ -15,7 +15,7 @@
 
 # TesseractRecognizer.py
 # 2022/10/20
-# toshiyuki.arai@xenera.jp
+
 # This works on Windows11
 
 import os
@@ -48,7 +48,7 @@ class TesseractTextBoxRecognizer:
     PREPROCESSOR        = "preprocessor"
     self.preprocessing  = self.config.get(PREPROCESSOR, "preprocessing") 
     self.image_scaling  = self.config.get(PREPROCESSOR, "image_scaling")
-    self.contrast       = self.config.get(PREPROCESSOR, "constrast")
+    self.contrast       = self.config.get(PREPROCESSOR, "contrast")
     self.gray_image     = self.config.get(PREPROCESSOR, "gray_image")
     self.sharpness      = self.config.get(PREPROCESSOR, "sharpness")
 

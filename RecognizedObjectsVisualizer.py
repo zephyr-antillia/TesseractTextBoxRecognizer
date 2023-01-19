@@ -40,7 +40,8 @@ class RecognizedObjectsVisualizer:
       if height < width:
         fsize = height
         direction = TEXT_HORIZONTAL
-      font = ImageFont.truetype(self.font_name, fsize) 
+      fsize = int(fsize)
+      font  = ImageFont.truetype(self.font_name, fsize) 
     except IOError:
       print("Failed to font_name {} size {} ".format(self.font_name, fsize))
      
@@ -80,7 +81,7 @@ class RecognizedObjectsVisualizer:
         y = min_y
         for ch in text:
           draw.text((min_x, y), ch, fill="black", font=font)
-          print(ch)
+          #print(ch)
           y += w
 
     basename = os.path.basename(image_file)
